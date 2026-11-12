@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BaixaFotos</string>
+    <string name="subtitle">Cole o link de uma ou mais fotos e salve na galeria.</string>
+    <string name="hint">https://exemplo.com/foto.jpg\n(um link por linha)</string>
+    <string name="paste">Colar link</string>
+    <string name="clear">Limpar</string>
+    <string name="download">Baixar fotos</string>
+    <string name="preview">Prévia da última foto baixada</string>
+    <string name="tip">Dica: no navegador, toque em Compartilhar e escolha BaixaFotos para trazer o link direto para cá. As fotos ficam na galeria, no álbum \"BaixaFotos\".</string>
+    <string name="no_link">Nenhum link encontrado. Cole um endereço começando com http:// ou https://</string>
+    <string name="no_link_clipboard">A área de transferência não tem nenhum link.</string>
+    <string name="downloading">Baixando… %1$d de %2$d</string>
+    <string name="done">Pronto! %1$d de %2$d foto(s) salva(s) no álbum \"%3$s\".</string>
+    <string name="errors">Não foi possível baixar:</string>
+    <string name="saved_toast">%1$d foto(s) salva(s) na galeria</string>
+    <string name="not_image">o link não aponta para uma imagem</string>
+    <string name="too_many_redirects">redirecionamentos demais</string>
+    <string name="save_failed">falha ao salvar na galeria</string>
+    <string name="permission_denied">Sem permissão de armazenamento não dá para salvar as fotos.</string>
+</resources>
