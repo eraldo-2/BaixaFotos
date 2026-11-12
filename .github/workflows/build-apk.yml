@@ -4,6 +4,9 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -24,3 +27,14 @@ jobs:
         with:
           name: BaixaFotos-apk
           path: app/build/outputs/apk/release/*.apk
+
+      - name: Publicar APK na página de Releases
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp app/build/outputs/apk/release/app-release.apk BaixaFotos.apk
+          gh release delete ultima-versao --yes --cleanup-tag || true
+          gh release create ultima-versao BaixaFotos.apk \
+            --title "BaixaFotos (última versão)" \
+            --notes "APK gerado automaticamente a partir do commit ${GITHUB_SHA::7}."
